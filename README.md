@@ -1,9 +1,14 @@
 # containers
 
-implements an n-dimensional sparse or "full" array backed on a
+author: andreas hadjiprocopis (andreashad2@gmail.com)
+
+Implements an n-dimensional sparse or "full" array backed on a
 1D flat array.
 
-compile using
+It depends on the 'Cartesian' package which can be downloaded from
+my repository (e.g. https://github.com/hadjiprocopis/containers)
+
+compile this code using
 ```
 ant clean && ant
 ```
@@ -21,7 +26,9 @@ public  class TestSparseArray {
 	public static void main(String args[]){
 		SparseArray<InsertData1> spa = new SparseArray<InsertData1>(
 			"a sparse array",
+			// 2 dimensions, 10 bins in each dim
 			new int[]{10, 10},
+			// this is the data type to insert
 			InsertData1.class
 		);
 		int     i, j;
