@@ -8,10 +8,10 @@ public	class TestSparseArrayHUGE {
 		int DIMS[] = new int[]{500, 500, 500, 500, 500, 500};
 		int NUM_ITEMS_TO_INSERT = 100000;
 		int mySeed = 1234;
-		SparseArray<ShitcHUGE> spa = new SparseArray<ShitcHUGE>(
+		SparseArray<InsertDataHUGE> spa = new SparseArray<InsertDataHUGE>(
 			"a sparse array",
 			DIMS,
-			ShitcHUGE.class
+			InsertDataHUGE.class
 		);
 
 		int	num_dims = DIMS.length;
@@ -22,7 +22,7 @@ public	class TestSparseArrayHUGE {
 		for(i=NUM_ITEMS_TO_INSERT;i-->0;){
 			for(j=num_dims;j-->0;){ acoord[j] = myRNG.nextInt(DIMS[j]); }
 			if( ! spa.contains(acoord) ){ num_added++; }
-			ShitcHUGE ObjToPut = new ShitcHUGE(
+			InsertDataHUGE ObjToPut = new InsertDataHUGE(
 				"shit:"+java.util.Arrays.toString(acoord),
 				acoord
 			);
@@ -34,10 +34,10 @@ public	class TestSparseArrayHUGE {
 		System.out.println("Done in "+((System.nanoTime()-time_started)/1000)+" milliseconds.");
 	}
 }
-class	ShitcHUGE {
+class	InsertDataHUGE {
 	String name;
 	int v[];
-	public	ShitcHUGE(String n, int av[]){ this.name = n; this.v = av; }
+	public	InsertDataHUGE(String n, int av[]){ this.name = n; this.v = av; }
 	public	String	toString(){ return "'"+name+"' : "+java.util.Arrays.toString(v); }
 }
 

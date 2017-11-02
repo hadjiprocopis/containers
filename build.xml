@@ -113,11 +113,11 @@
 			<arg value="-Xmx6g"/>
 		</java>
 	</target>
-	<target name="TestFlatArray" depends="compiletest"
+	<target name="TestDenseArray" depends="compiletest"
 		description="run the test case for 2D"
-		id="TestFlatArray"
+		id="TestDenseArray"
 	>
-		<java classname='TestFlatArray'
+		<java classname='TestDenseArray'
 			fork='true'
 		>
 			<classpath refid='runtest.classpath'/>
@@ -133,7 +133,7 @@
 		description="run ALL the tests"
 	>
 		<!-- calling many targets from 1 target -->
-		<antcall target="TestFlatArray"/>
+		<antcall target="TestDenseArray"/>
 		<antcall target="TestSparseArrayHUGE"/>
 		<antcall target="TestSparseArrayVERIFY_PUT_GET"/>
 	</target>
