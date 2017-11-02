@@ -29,7 +29,7 @@
                 </exec>
                 <exec executable="git">
                         <arg value="push"/>
-                        <arg value="git@github.com:hadjiprocopis/cartesian.git"/>
+                        <arg value="git@github.com:hadjiprocopis/containers.git"/>
                         <arg value="--all"/>
                 </exec>
         </target>
