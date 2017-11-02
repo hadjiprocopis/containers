@@ -5,6 +5,7 @@ implements an n-dimensional sparse or "full" array backed on a
 
 In order to create a full array on N-dimensions do:
 
+```
 import ahp.org.Containers.*;
 
 public  class TestFlatArray {
@@ -38,4 +39,6 @@ class Shitc2 {
         public  Shitc2(String n, int av[]){ this.name = n; this.v = av; }
         public  String  toString(){ return "'"+name+"' : "+Arrays.toString(v); }
 }
+``` 
 
+author: andreas hadjiprocopis (andreashad2@gmail.com)
